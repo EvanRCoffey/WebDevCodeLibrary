@@ -1,0 +1,34 @@
+<!--Textbox-->
+Instructional text goes here:<br>
+<input type="text" id="textboxName"><br>
+<button onclick="getTextbox()">Submit</button><br><br>
+
+<script>
+function getTextbox() {
+	return document.getElementById("textboxName").value;
+}
+</script>
+
+<!--Slidebar-->
+Instructional text goes here:<br>
+<input type="range" min="1" max="50" value="20" step="1" class="radius" onchange="showData(this.value)"/>
+<span id="dataSlidebar">Value: 20 </span>
+<button>Submit</button><br><br>
+
+<script>
+function showData(newValue) {
+	document.getElementById("dataSlidebar").innerHTML="Value: " + newValue + " ";}
+</script>
+
+<!--Checkboxes-->
+Which of these can we help you find today?<br><br>
+<input type="checkbox" name="box1" id="box1" checked>Box1<br>
+<input type="checkbox" name="box2" id="box2" checked>Box2<br>
+<input type="checkbox" name="box3" id="box3" checked>Box3<br><br>
+<button>Submit</button><br><br>
+
+<script>
+var bool1 = document.getElementById("box1").checked;
+var bool2 = document.getElementById("box2").checked;
+var bool3 = document.getElementById("box3").checked;
+</script>
